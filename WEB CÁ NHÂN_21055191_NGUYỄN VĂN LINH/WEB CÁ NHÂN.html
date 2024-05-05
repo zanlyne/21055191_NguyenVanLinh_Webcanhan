@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Văn Linh</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Tac+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #acc3cd;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+    background-color: #63649a;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+        .header .menu {
+    flex: 1;
+    text-align: left;
+}
+
+
+#menu {
+    list-style:none;
+    display: flex;
+}
+
+#menu .item {
+    margin: 0px 15px;
+}
+
+#menu .item a {
+    color:#eceaf6;
+    text-decoration: none;
+}
+#menu .item:hover {
+    background-color: #2f1c90; /* Màu nền khi di chuột vào */
+	padding: 10px 10px;
+	border-radius: 5px;
+	transition: padding 0.3s ease, background-color 0.3s ease; /* Hiệu ứng chuyển đổi kích thước và màu nền */
+}
+.image {
+    display: inline-block;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .image:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .image img {
+ 
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .image:hover img {
+    transform: scale(1.0);
+  }
+        main {
+    flex: 1; /* Main content sáº½ má»Ÿ rá»™ng Ä‘á»ƒ chiáº¿m háº¿t khÃ´ng gian cÃ²n láº¡i */
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.left-column {
+    flex: 4; /* Má»—i cá»™t sáº½ má»Ÿ rá»™ng Ä‘á»ƒ chiáº¿m má»™t pháº§n cá»§a main content */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align:justify;
+}
+.right-column {
+    flex: 2; /* Má»—i cá»™t sáº½ má»Ÿ rá»™ng Ä‘á»ƒ chiáº¿m má»™t pháº§n cá»§a main content */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align:center;
+    height:min-content;
+}
+.right-column a {
+    text-decoration: none;
+    display:block;
+}
+
+.left-column div, .right-column div {
+    background-color: #f0f0f0;
+    padding: 10px;
+    flex: 1; /* Má»—i khung sáº½ má»Ÿ rá»™ng Ä‘á»ƒ chiáº¿m pháº§n cá»§a cá»™t */
+}
+.icon {
+        width: 100%;
+        height: auto;
+        background-color: #f0f0f0;
+        display: flex; /* Sử dụng flexbox */
+        justify-content: center; /* Canh giữa các phần tử theo chiều ngang */
+        align-items: center; /* Canh giữa các phần tử theo chiều dọc */
+    }
+    .social-icon i {
+        font-size: 40px; /* Kích thước của biểu tượng */
+    }
+    
+    .social-icon {
+        margin: 0 10px; /* Khoảng cách giữa các biểu tượng */
+        transition: transform 0.3s; /* Thêm hiệu ứng transition */
+    }
+    
+    .social-icon:hover {
+        transform: scale(1.2); /* Phóng to biểu tượng khi di chuột qua */
+    }
+    
+    .social-icon:active {
+        transform: scale(0.8); /* Thu nhỏ biểu tượng khi nhấp vào */
+    }
+     
+    footer {
+			background-color: #436b90;
+			color: #fff;
+			text-align: center;
+			padding: 5px 0;
+			position: relative;
+		}
+	
+		/* Phần tử con trong footer */
+		footer p {
+			margin: 5px 0; /* Thêm một khoảng cách giữa các phần tử p */
+		}
+	
+		footer a {
+			color: #fff;
+			text-decoration: none;
+			transition: color 0.3s ease;
+		}
+	
+		footer a:hover {
+			color: #c11e1e;
+		}
+	
+		/* Thiết kế cho logo */
+		.footer-logo {
+			width: 100px; /* Kích thước của logo */
+			margin-bottom: 1px; /* Khoảng cách giữa logo và các phần tử khác */
+            margin-top: -20px;
+        }
+	
+		/* Thiết kế cho danh mục */
+		.footer-menu {
+			list-style: none; /* Xóa dấu đầu dòng cho danh sách */
+			padding: 0; /* Xóa padding mặc định của danh sách */
+		}
+	
+		.footer-menu li {
+			display: inline-block; /* Hiển thị các mục danh sách trên cùng một dòng */
+			margin: 0 10px; /* Khoảng cách giữa các mục danh sách */
+		}
+        .footer-container {
+            max-width: 1400px; /* Điều chỉnh theo kích thước của footer */
+            margin: 0 auto; /* Căn giữa footer trên màn hình */
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .footer-left,
+        .footer-right {
+            width: 60%;
+        }
+        
+        .facebook-group {
+            padding: 5px;
+        }
+        
+        .facebook-group h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .facebook-group p {
+            margin-bottom: 10px;
+        }
+      .text-animation {
+        font-size: 30px;
+        color: rgb(255, 255, 255);
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+<header>
+    <img src="header.png">
+    <div class="header">
+        <div class="menu">
+          <div id="menu">
+              <div class="item">
+                  <a href="WEB CÁ NHÂN.html">Trang Giới Thiệu</a>
+              </div>
+              <div class="item">
+                  <a href="Lienhetoi.html">Gửi Tin Nhắn Phản Hồi</a>
+              </div>
+          </div>
+        </div>
+</header>
+<main>
+    <div class="left-column">
+        <div>
+            <h2>GIỚI THIỆU BẢN THÂN</h2>
+            <div class="image-container">
+                <div class="image">
+                <center>  <img src="Hình 1.jpg" width="530" height="400" alt="Hình ảnh"></center>
+            </div>
+                <p>Chào mọi người,</p>
+            <p>Mình tên là Nguyễn Văn Linh, sinh năm 2003, một sinh viên đầy năng động và ham học hỏi. Mình hiện đang theo học tại trường Đại học Công nghiệp TP. HCM.</p>
+                <p>Sở thích chính của mình là nghe nhạc, đọc truyện tranh và mình luôn muốn khám phá thêm về thế giới xung quanh.        
+                Mình có đam mê học tập và luôn cố gắng hết mình để đạt được thành công trong các môn học.
+                Ngoài ra, mình cũng thích tham gia vào các hoạt động xã hội và từ thiện để tạo ra sự tích cực trong cộng đồng.</p>     
+                <p> Mình hy vọng sẽ có cơ hội được làm quen và học hỏi từ tất cả mọi người ở đây. Hãy cùng chúng mình tạo nên những kỷ niệm vui vẻ và ý nghĩa trong thời gian sắp tới nhé!</p>         
+                <p> Mình cũng có một group để mọi người trao đổi về truyện tranh, mọi người có thể tham gia cùng mình ở phần cuối trang nha.</p>
+                <p>Cảm ơn mọi người đã dành thời gian đọc về mình!</p>
+            </div>
+        </div>
+    </div>
+    <div class="right-column">
+        <div>
+            <h3>HỌC VẤN</h3>
+            <div class="image">
+            <a href="https://iuh.edu.vn/"><img width="200" src="logo trường.png"></a>
+            </div>
+            <p>
+                Thương mại điện tử
+            </br>
+                GPA: 3.30
+            </p>
+        </div>
+        <div>
+           <h3>QUÊ HƯƠNG</h3>
+           <div class="image">
+           <a href="https://vi.wikipedia.org/wiki/%C4%90%E1%BB%93ng_Th%C3%A1p"><img width="200" src="đồng tháp.png"></a>
+        </div>
+           <p>
+            Tháp Mười đẹp nhất bông sen
+        </br>
+            Việt Nam đẹp nhất có tên Bác Hồ
+        </p>
+        </div>
+        <div>
+            <h3>MẠNG XÃ HỘI</h3>
+            <div id="icon">
+                <a href="https://web.facebook.com/profile.php?id=100061415500922" target="_blank" class="social-icon"><i class="fab fa-facebook-square"></i></a>
+            </div>
+            
+        </div>
+        <div>
+            <h3>LIÊN HỆ TÔI</h3>
+            <P>Email: daonguyenvanlinh@gmail.com
+            </br>
+            Số điện thoại: 098 727 1203
+        </br>
+        </div>
+    </div>
+</main>
+    <footer>
+        <span class="text-animation">
+            <marquee direction="left" behavior="scroll"> CẢM ƠN MỌI NGƯỜI ĐÃ GHÉ THĂM TRANG CÁ NHÂN CỦA MÌNH NHÉ!</marquee>
+          </span>
+		<footer class="comic-footer">
+			<div class="footer-container">
+				<div class="footer-left">
+					<!-- Phần bên trái: gr Facebook -->
+					<div class="facebook-group">
+						<h3>Mời các bạn tham gia cộng đồng trên Facebook</h3>
+						<p>Group do mình tạo để kết nối mọi người có sở thích đọc truyện</p>
+						<a href="https://web.facebook.com/groups/950986619874651/"><img src="fb footer.png"></a>
+					</div>
+				</div>
+				<div class="footer-right">
+					<a href="" class="footer-logo">
+						<img src="Logo.png" alt="Logo" class="footer-logo">
+					</a>
+						<!-- Danh mục -->
+						<ul class="footer-menu">
+							<li><a href="WEB CÁ NHÂN.html">Trang Giới Thiệu</a></li>
+							<li><a href="Lienhetoi.html">Gửi Tin Nhắn Phản Hồi</a></li>
+						</ul>
+                        <p>Email: daonguyenvanlinh@gmail.com</p>
+                        <p>Số điện thoại: 0987271203</p>
+						<p> &copy; 2024 Nguyễn Văn Linh</p>
+					</div>
+				</div>
+			</div>
+  </footer>
+</div>
+
+
+
